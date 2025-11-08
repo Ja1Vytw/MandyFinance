@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Navigation from "@/components/navigation"
 import Dashboard from "@/components/dashboard"
 import BillsPage from "@/components/bills-page"
 import CreditCardsPage from "@/components/credit-cards-page"
@@ -11,6 +10,8 @@ import ReportsPage from "@/components/reports-page"
 import RecurringIncomePage from "@/components/recurring-income-page"
 import InstallmentsPage from "@/components/installments-page"
 import DueDatesCalendar from "@/components/due-dates-calendar"
+import Navigation from "@/components/navigation"
+import AIActionButton from "@/components/ai-action-button/ai-action-button"
 import { type FinancialData, getFinancialData } from "@/lib/storage"
 
 type Page =
@@ -93,6 +94,7 @@ export default function Home() {
         {currentPage === "investments" && <InvestmentsPage data={data} onDataChange={handleDataChange} />}
         {currentPage === "reports" && <ReportsPage data={data} onDataChange={handleDataChange} />}
       </main>
+      <AIActionButton />
     </div>
   )
 }

@@ -21,9 +21,8 @@ export default function Navigation({ currentPage, onPageChange }: NavigationProp
   ]
 
   return (
-    <nav className="w-56 bg-sidebar text-sidebar-foreground border-r border-sidebar-border p-6 flex flex-col">
-      <h1 className="text-2xl font-bold mb-8 text-sidebar-primary">FinGest</h1>
-
+    <nav className="w-56 bg-sidebar text-sidebar-foreground border-r border-sidebar-border p-6 flex flex-col"> 
+      <h1 className="text-2xl font-bold mb-8 text-sidebar-primary">Mandy Finance</h1>
       <div className="flex flex-col gap-2 flex-1">
         {navItems.map((item) => {
           const Icon = item.icon
@@ -46,9 +45,6 @@ export default function Navigation({ currentPage, onPageChange }: NavigationProp
         })}
       </div>
 
-      <div className="pt-6 border-t border-sidebar-border text-sm text-sidebar-accent-foreground">
-        <p>Gerencie suas finanças juntos</p>
-      </div>
     </nav>
   )
 }
